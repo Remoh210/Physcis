@@ -11,7 +11,6 @@ namespace nPhysics
 	public:
 
 
-
 		struct RK4_Derivative
 		{
 			RK4_Derivative() :
@@ -39,10 +38,10 @@ namespace nPhysics
 		virtual bool AddBody(iRigidBody* body);
 		virtual bool RemoveBody(iRigidBody* body);
 
+		//Soft Body
 		virtual bool AddBody(iSoftBody* body);
 		virtual bool RemoveBody(iSoftBody* body);
 		
-
 		virtual void Update(float dt);
 
 	private:

@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BulletPhysics", "BulletPhys
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Physics_Interfaces", "Physics_Interfaces\Physics_Interfaces.vcxproj", "{D62DA76F-9D9F-40B5-A183-E25D886DFF18}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example", "example\example.vcxproj", "{453502D0-5CE8-4CDA-93A9-021188165D2A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E3A9F462-FC4D-48DD-B144-EF8BB9CE5E2C} = {E3A9F462-FC4D-48DD-B144-EF8BB9CE5E2C}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +36,14 @@ Global
 		{D62DA76F-9D9F-40B5-A183-E25D886DFF18}.Release|x64.Build.0 = Release|x64
 		{D62DA76F-9D9F-40B5-A183-E25D886DFF18}.Release|x86.ActiveCfg = Release|Win32
 		{D62DA76F-9D9F-40B5-A183-E25D886DFF18}.Release|x86.Build.0 = Release|Win32
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Debug|x64.ActiveCfg = Debug|x64
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Debug|x64.Build.0 = Debug|x64
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Debug|x86.ActiveCfg = Debug|Win32
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Debug|x86.Build.0 = Debug|Win32
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x64.ActiveCfg = Release|x64
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x64.Build.0 = Release|x64
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x86.ActiveCfg = Release|Win32
+		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

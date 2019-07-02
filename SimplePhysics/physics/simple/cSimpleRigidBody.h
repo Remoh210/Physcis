@@ -41,10 +41,8 @@ namespace nPhysics
 		
 
 	protected:
-		//cSimpleRigidBody(const sRigidBodyDef& def, iShape* shape);
 		cSimpleRigidBody();
-		cSimpleRigidBody(const cSimpleRigidBody& other);
-		cSimpleRigidBody& operator = (const cSimpleRigidBody& other);
+
 	private:
 		friend class cSimplePhysicsWorld;
 		iShape* mShape;

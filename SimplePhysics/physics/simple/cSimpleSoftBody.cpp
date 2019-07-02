@@ -203,7 +203,6 @@ namespace nPhysics
 
 		}
 
-
 	}
 
 	cSimpleSoftBody::cSpring::cSpring(cNode * nodeA, cNode * nodeB, float springConstant)

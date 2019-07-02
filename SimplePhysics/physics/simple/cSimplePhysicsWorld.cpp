@@ -92,7 +92,6 @@ namespace nPhysics
 			}
 		}
 		return false;
-		//else
 
 	}
 
@@ -156,7 +155,6 @@ namespace nPhysics
 
 					}
 
-
 				}
 			}
 
@@ -212,11 +210,11 @@ namespace nPhysics
 
 	void cSimplePhysicsWorld::Update(float dt)
 	{
-		//STEP 1 Integrate all rigid bodies
+		//Integrate all rigid bodies
 
 		if (mBodies.size() == 0) { return; }
 
-		//DO collison staff
+		//DO collison 
 		std::vector<std::pair<cSimpleRigidBody*, cSimpleRigidBody*>> collisions;
 		size_t numBodies = mBodies.size();
 		for (size_t idxA = 0; idxA < numBodies; idxA++)
@@ -308,7 +306,6 @@ namespace nPhysics
 								rbB->mVelocity = glm::reflect(rbB->mVelocity, normA);
 								glm::vec3 nComponent = glm::proj(rbB->mVelocity, normA);
 								rbB->mVelocity -= nComponent * 5.0f * dt;
-								//rbB->mVelocity *= 0.995f;
 							}
 							else {
 								rbB->mVelocity *= 0.995f * dt;
@@ -366,7 +363,6 @@ namespace nPhysics
 			}
 			itSoft++;
 		}
-
 
 
 	}
