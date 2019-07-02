@@ -6,7 +6,6 @@
 #include "sSoftBodyDef.h"
 #include "shapes.h"
 #include "iSoftBody.h"
-#include "iWreckingBallPhysics.h"
 #include "iConstraint.h"
 #include "GL_Vertex.h"
 #include "GL_Triangle.h"
@@ -18,7 +17,6 @@ namespace nPhysics
 	{
 	public:
 		virtual ~iPhysicsFactory() {};
-
 		virtual iPhysicsWorld* CreatePhysicsWorld() = 0;
 
 		//Basic Shapes

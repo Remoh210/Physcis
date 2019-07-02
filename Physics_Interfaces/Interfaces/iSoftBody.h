@@ -17,9 +17,5 @@ namespace nPhysics
 
 	protected:
 		iSoftBody(){}
-		iSoftBody(const iSoftBody& other){}
-		iSoftBody& operator=(const iSoftBody& other) { return *this; }
-
-
 	};
 }

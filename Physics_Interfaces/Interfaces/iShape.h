@@ -27,8 +27,6 @@ namespace nPhysics
 
 	protected: 
 		iShape(eShapeType shapeType) : mShapeType(shapeType){}
-		iShape(const iShape& other){}
-		iShape& operator=(const iShape& other) { return *this; }
 	private:
 		eShapeType mShapeType;
 	};

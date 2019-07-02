@@ -13,16 +13,10 @@ namespace nPhysics
 		cBulletPoinToPointConstraint(cBulletRigidBody* rb, const btVector3& pivot);
 		cBulletPoinToPointConstraint(cBulletRigidBody* rbA, cBulletRigidBody* rbB, const btVector3& pivotInA, const btVector3& pivotInB);
 		virtual ~cBulletPoinToPointConstraint();
-
-
 		virtual btTypedConstraint* GetTypedConstraint() { return mConstraint; }
 
 	private:
 		btPoint2PointConstraint* mConstraint;
-		cBulletPoinToPointConstraint(const cBulletPoinToPointConstraint& other) {}
-		cBulletPoinToPointConstraint& operator=(const cBulletPoinToPointConstraint& other) { return *this; }
-
-	private:
 		eConstraintType mConstraintType;
 	};
 
@@ -32,16 +26,10 @@ namespace nPhysics
 		cBulletHingeConstraint(cBulletRigidBody* rb, const btVector3& pivot, const btVector3& axis);
 		cBulletHingeConstraint(cBulletRigidBody* rbA, cBulletRigidBody* rbB, const btVector3& pivotInA, const btVector3& pivotInB, const btVector3& axisInA, const btVector3& axisInB);
 		virtual ~cBulletHingeConstraint();
-
-
 		virtual btTypedConstraint* GetTypedConstraint() { return mConstraint; }
 
 	private:
 		btHingeConstraint* mConstraint;
-		cBulletHingeConstraint(const cBulletHingeConstraint& other) {}
-		cBulletHingeConstraint& operator=(const iConstraint& other) { return *this; }
-
-	private:
 		eConstraintType mConstraintType;
 	};
 

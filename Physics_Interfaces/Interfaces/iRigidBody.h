@@ -23,10 +23,6 @@ namespace nPhysics
 		virtual std::string GetGOName() = 0;
 		
 		
-
-
-		//virtual void SetTransform(glm::mat4 transform) = 0;
-		//virtual void ApplyForce(const glm::vec3& force) = 0;
 		virtual void SetCollision(bool coll) = 0;
 		virtual void SetPosition(glm::vec3 position) = 0;
 		virtual void SetEulerRotation(glm::vec3 rotation) = 0;
@@ -43,9 +39,5 @@ namespace nPhysics
 
 	protected:
 		iRigidBody(){}
-		iRigidBody(const iRigidBody& other){}
-		iRigidBody& operator=(const iRigidBody& other) { return *this; }
-
-
 	};
 }

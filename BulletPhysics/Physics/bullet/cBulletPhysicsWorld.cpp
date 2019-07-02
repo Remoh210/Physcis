@@ -47,7 +47,7 @@ nPhysics::cBulletPhysicsWorld::cBulletPhysicsWorld()
 
 nPhysics::cBulletPhysicsWorld::~cBulletPhysicsWorld()
 {
-	if(mDynamicsWorld)
+	if (mDynamicsWorld)
 	{
 		delete mDynamicsWorld;
 		mDynamicsWorld = 0;
@@ -143,13 +143,13 @@ void nPhysics::cBulletPhysicsWorld::AddConstraint(iConstraint * constraint)
 		this->mDynamicsWorld->addConstraint(basConstraint->GetTypedConstraint());
 
 	}
-		break;
+	break;
 	case nPhysics::CONSTRAINT_TYPE_HINGE:
 	{
 		cBulletHingeConstraint* hingeConstraint = dynamic_cast<cBulletHingeConstraint*>(constraint);
 		this->mDynamicsWorld->addConstraint(hingeConstraint->GetTypedConstraint());
 	}
-		break;
+	break;
 	default:
 		break;
 	}

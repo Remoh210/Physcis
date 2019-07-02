@@ -16,15 +16,18 @@ namespace nPhysics
 		inline btRigidBody* GetBulletBody() { return mBody; }
 
 		virtual iShape* GetShape();
-		virtual glm::mat4 GetTransform();
+
 		virtual glm::vec3 GetPosition();
 		virtual glm::vec3 GetEulerRotation();
-		virtual glm::mat4 GetMatRotation();
-		virtual float GetMass();
-		virtual bool GetCollision();
 		virtual glm::vec3 GetVelocity();
 		virtual glm::vec3 GetAccel();
 		virtual glm::vec3 GetAngulatVelocity();
+		virtual glm::mat4 GetMatRotation();
+		virtual glm::mat4 GetTransform();
+
+		virtual float GetMass();
+		virtual bool GetCollision();
+
 		virtual std::string GetGOName();
 
 		virtual void SetPosition(glm::vec3 position);

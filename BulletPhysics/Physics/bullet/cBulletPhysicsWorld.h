@@ -25,9 +25,6 @@ namespace nPhysics {
 		virtual iRigidBody* RayCastGetObject(glm::vec3& from, glm::vec3& to);
 		void Update(float dt);
 
-	protected:
-		cBulletPhysicsWorld(const cBulletPhysicsWorld& other) {}
-		cBulletPhysicsWorld& operator=(const cBulletPhysicsWorld& other) { return *this; }
 	private:
 
 		btDefaultCollisionConfiguration* mCollisionConfiguration;

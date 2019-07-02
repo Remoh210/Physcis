@@ -4,7 +4,6 @@
 namespace nPhysics
 {
 
-
 	cBulletSphereShape::cBulletSphereShape(float radius)
 		: iSphereShape()
 		, mRadius(radius)
@@ -16,9 +15,6 @@ namespace nPhysics
 	{
 		delete mBulletShape;
 	}
-
-
-
 
 	cBulletPlaneShape::cBulletPlaneShape(const glm::vec3& normal, float planeConst)
 		: iPlaneShape()
@@ -33,22 +29,17 @@ namespace nPhysics
 		delete mBulletShape;
 	}
 
-
 	bool cBulletPlaneShape::GetPlaneNormal(glm::vec3& planeNormalOut)
 	{
 		planeNormalOut = mNormal;
 		return true;
 	}
+
 	bool cBulletPlaneShape::GetPlaneConstant(float& planeConstantOut)
 	{
 		planeConstantOut = mCnonst;
 		return true;
 	}
-
-
-
-
-
 
 	cBulletCylinderShape::cBulletCylinderShape(const glm::vec3 & halfExtents, int axis)
 		: iCylinderShape()
@@ -109,9 +100,6 @@ namespace nPhysics
 		return mAxis;
 	}
 
-
-
-
 	cBulletCapsuleShape::cBulletCapsuleShape(float height, float radius, int axis)
 		: iCapsuleShape()
 		, mRadius(radius)
@@ -167,8 +155,6 @@ namespace nPhysics
 	cBulletBoxShape::~cBulletBoxShape()
 	{
 	}
-
-
 
 	cBulletMeshCollider::cBulletMeshCollider(const GL_Triangle * triangles, size_t numOfTriangles)
 	{

@@ -7,6 +7,7 @@
 #include <glm/gtx/quaternion.hpp>
 //#include <glm/vec3.hpp>
 namespace nPhysics {
+
 	namespace nConvert
 	{
 		inline glm::vec3 ToSimple(const btVector3& vecIn)
@@ -36,9 +37,7 @@ namespace nPhysics {
 		}
 		inline void ToSimple(const btTransform& transform, glm::mat4 matOut)
 		{
-
 			transform.getOpenGLMatrix(&matOut[0][0]);
-
 		}
 
 		inline glm::quat ToSimple(const btQuaternion& quatIn)
@@ -54,9 +53,6 @@ namespace nPhysics {
 			return quatBT;
 		}
 
-
 	}
-
-
 
 }

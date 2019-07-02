@@ -14,8 +14,6 @@ namespace nPhysics
 
 	protected:
 		iCollisonBody(eBodyType bodyType) : mBodyType(bodyType) {}
-		iCollisonBody(const iCollisonBody& other) {}
-		iCollisonBody& operator=(const iCollisonBody& other) { return *this; }
 	private:
 		eBodyType mBodyType;
 	};
