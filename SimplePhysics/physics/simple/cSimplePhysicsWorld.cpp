@@ -7,7 +7,6 @@
 namespace nPhysics
 {
 	cSimplePhysicsWorld::cSimplePhysicsWorld()
-		:mDebugRenderer(0)
 	{
 
 	}
@@ -16,20 +15,16 @@ namespace nPhysics
 	{
 
 	}
-	void cSimplePhysicsWorld::SetDebugRenderer(iDebugRenderer* debugRenderer)
-	{
-		mDebugRenderer = debugRenderer;
-	}
 	void cSimplePhysicsWorld::DrawDebug()
 	{
-		if (!mDebugRenderer)
-		{
-			return;
-		}
-		for (size_t i = 0; i < mBodies.size(); i++)
-		{
+		//if (!mDebugRenderer)
+		//{
+		//	return;
+		//}
+		//for (size_t i = 0; i < mBodies.size(); i++)
+		//{
 
-		}
+		//}
 	}
 	void cSimplePhysicsWorld::SetGravity(const glm::vec3& gravity)
 	{
@@ -101,7 +96,6 @@ namespace nPhysics
 		if (aMax[0] < bMin[0] || aMin[0] > bMax[0]) {
 			return false;
 		}
-
 		if (aMax[1] < bMin[1] || aMin[1] > bMax[1]) {
 			return false;
 		}
@@ -127,8 +121,6 @@ namespace nPhysics
 
 		rigidBody->GetAABB(RigidBodyMin, RigidBodyMax);
 		softBody->GetAABB(SoftBodyMin, SoftBodyMax);
-
-
 
 
 		if (rigidBody->GetShape()->GetShapeType() == SHAPE_TYPE_SPHERE)
@@ -206,12 +198,10 @@ namespace nPhysics
 		mSoftBodies.erase(itSoftBody, mSoftBodies.end());
 	}
 
-
-
+ 
 	void cSimplePhysicsWorld::Update(float dt)
 	{
-		//Integrate all rigid bodies
-
+		
 		if (mBodies.size() == 0) { return; }
 
 		//DO collison 
@@ -233,7 +223,6 @@ namespace nPhysics
 						if (rbA->GetShape()->GetShapeType() == nPhysics::SHAPE_TYPE_SPHERE && rbB->GetShape()->GetShapeType() == nPhysics::SHAPE_TYPE_SPHERE)
 						{
 
-
 							rbA->mPosition = rbA->mLastPos;
 							rbB->mPosition = rbB->mLastPos;
 
@@ -241,15 +230,11 @@ namespace nPhysics
 							float massB = rbB->mMass;
 							float totalMass = massA + massB;
 
-
-
 							float fac1 = massA / totalMass;
 							float fac2 = massB / totalMass;
 
-
 							glm::vec3 x = rbA->mPosition - rbB->mPosition;
 							x = glm::normalize(x);
-
 
 							glm::vec3 v1 = rbA->mVelocity;
 							float x1 = glm::dot(x, v1);
@@ -267,8 +252,6 @@ namespace nPhysics
 							rbA->mVelocity *= 0.95f;
 							rbB->mVelocity *= 0.95f;
 
-
-
 							float rad;
 							rbA->GetShape()->GetSphereRadius(rad);
 							if (abs(rbA->mPosition.y) <= rad + 0.2f)
@@ -282,14 +265,10 @@ namespace nPhysics
 								}
 							}
 
-
-
 						}
-
 
 						if (rbB->GetShape()->GetShapeType() == nPhysics::SHAPE_TYPE_SPHERE && rbA->GetShape()->GetShapeType() == nPhysics::SHAPE_TYPE_PLANE)
 						{
-
 
 							rbB->mPosition = rbB->mLastPos;
 							float radiusB;
@@ -299,7 +278,6 @@ namespace nPhysics
 							glm::vec3 normA;
 							rbA->GetShape()->GetPlaneConstant(constA);
 							rbA->GetShape()->GetPlaneNormal(normA);
-
 
 							if (abs(rbB->mVelocity.y) > 1.0f || normA.y != 1.0f)
 							{
@@ -311,7 +289,6 @@ namespace nPhysics
 								rbB->mVelocity *= 0.995f * dt;
 							}
 
-
 						}
 
 
@@ -319,8 +296,6 @@ namespace nPhysics
 				}
 
 			}
-
-
 
 			if (rbA->GetShape()->GetShapeType() != nPhysics::SHAPE_TYPE_PLANE) {
 
@@ -338,13 +313,12 @@ namespace nPhysics
 				integrate(rbA->mPosition, rbA->mVelocity, mGravity, dt);
 			}
 
-
-
-
 		}
-		std::vector<cSimpleSoftBody*>::iterator itSoft = mSoftBodies.begin();
-		//SoftBodies Integration
 
+
+		
+		//SoftBodies Integration
+		std::vector<cSimpleSoftBody*>::iterator itSoft = mSoftBodies.begin();
 		while (itSoft != mSoftBodies.end())
 		{
 			(*itSoft)->UpdateInternal(dt, mGravity);
@@ -364,10 +338,7 @@ namespace nPhysics
 			itSoft++;
 		}
 
-
 	}
-
-
 
 	void cSimplePhysicsWorld::integrate(glm::vec3& pos, glm::vec3& vel, glm::vec3 accel, float dt)
 	{

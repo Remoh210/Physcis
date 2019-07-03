@@ -32,7 +32,6 @@ namespace nPhysics
 
 		cSimplePhysicsWorld();
 		virtual ~cSimplePhysicsWorld();
-		virtual void SetDebugRenderer(iDebugRenderer* debugRenderer);
 		virtual void DrawDebug();
 		virtual void SetGravity(const glm::vec3& gravity);
 		virtual bool AddBody(iRigidBody* body);
@@ -44,8 +43,15 @@ namespace nPhysics
 		
 		virtual void Update(float dt);
 
+		//Constraints
+		virtual void AddConstraint(iConstraint* constraint);
+		virtual void RemoveConstraint(iConstraint* constraint);
+		virtual std::pair<std::string, std::string> GetLastColPair();
+		virtual bool RayCast(glm::vec3& from, glm::vec3& to);
+		virtual iRigidBody* RayCastGetObject(glm::vec3& from, glm::vec3& to);
+		void Update(float dt);
+
 	private:
-		iDebugRenderer* mDebugRenderer;
 		bool CollisionTest(cSimpleRigidBody* bodyA, cSimpleRigidBody* bodyB);
 		bool CollideRigidBodySoftBody(cSimpleRigidBody* rigidBody, cSimpleSoftBody* softBody);
 		glm::vec3 mGravity;

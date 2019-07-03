@@ -53,6 +53,5 @@ namespace nPhysics
 		glm::vec3 mLastPos;
 		float mMass;
 		glm::vec3 mAnguralVel;
-		//float mInverseMass;
 	};
 }

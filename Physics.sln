@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example", "example\example.
 		{E3A9F462-FC4D-48DD-B144-EF8BB9CE5E2C} = {E3A9F462-FC4D-48DD-B144-EF8BB9CE5E2C}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimplePhysics", "SimplePhysics\SimplePhysics.vcxproj", "{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -44,6 +46,14 @@ Global
 		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x64.Build.0 = Release|x64
 		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x86.ActiveCfg = Release|Win32
 		{453502D0-5CE8-4CDA-93A9-021188165D2A}.Release|x86.Build.0 = Release|Win32
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Debug|x64.ActiveCfg = Debug|x64
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Debug|x64.Build.0 = Debug|x64
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Debug|x86.Build.0 = Debug|Win32
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Release|x64.ActiveCfg = Release|x64
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Release|x64.Build.0 = Release|x64
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Release|x86.ActiveCfg = Release|Win32
+		{F6A4CFFF-BF94-4DE8-A9A6-0C1A07A7AC83}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,7 +21,6 @@ namespace nPhysics
 		virtual float GetCapsuleRadius() { return 0.0f; }
 		virtual float GetCapsuleHeight() { return 0.0f; }
 		virtual int	GetCapsuleAxis() { return 0; }
-
 		//Box
 		virtual glm::vec3 GetHalfExtents() { return glm::vec3(0.f); }
 
