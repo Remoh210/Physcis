@@ -34,7 +34,7 @@ nPhysics::cBulletPhysicsWorld::cBulletPhysicsWorld()
 	mOverlappingPairCache = new btDbvtBroadphase();
 
 	//the default constraint solver.
-	mSolver = new btSequentialImpulseConstraintSolver;
+	mSolver = new btSequentialImpulseConstraintSolver();
 
 	mDynamicsWorld = new btDiscreteDynamicsWorld(mDispatcher, mOverlappingPairCache, mSolver, mCollisionConfiguration);
 
